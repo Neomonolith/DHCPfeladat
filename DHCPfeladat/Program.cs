@@ -23,9 +23,26 @@ namespace DHCPfeladat
       DHCP = new Dictionary<string, int>();
 
       beolvas();
-
+      testfajl();
+      kiir();
 
       Console.ReadKey();
+    }
+
+    private static void testfajl()
+    {
+
+
+    }
+
+    private static void kiir()
+    {
+      StreamWriter ki = new StreamWriter("dhcp_kesz.csv");
+      foreach (var D in DHCP)
+      {
+        ki.WriteLine("{0};{1} {2}", D.Key, induloIPcim, D.Value);
+      }
+      ki.Close();
     }
 
     private static void beolvas()
