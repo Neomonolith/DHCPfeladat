@@ -33,7 +33,7 @@ namespace DHCPfeladat
     {
       foreach (var D in DHCP)
       {
-        Console.WriteLine("{0};{1} {2}", D.Key, induloIPcim, D.Value);
+        Console.WriteLine("{0};\t{1}{2}\n", D.Key, induloIPcim, D.Value);
       }
     }
 
